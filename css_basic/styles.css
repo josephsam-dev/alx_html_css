@@ -1,0 +1,94 @@
+/* Reset default browser margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General body setup */
+body {
+  display: flex;
+  flex-direction: column; /* stack header, main, footer */
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header and Footer */
+header, footer {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Main layout */
+main {
+  display: flex;           /* article + aside side by side */
+  flex: 1;                 /* take up remaining space */
+  gap: 20px;               /* space between article and aside */
+  margin: 20px;
+  overflow: hidden;        /* prevent overflowing */
+}
+
+/* Article (2/3 width) */
+article {
+  flex: 3;                 /* grow 3 parts */
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  overflow-y: auto;        /* scroll if content is too long */
+}
+
+/* Aside (1/3 width) */
+aside {
+  flex: 1;                 /* grow 1 part */
+  background: #e2e2e2;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-y: auto;        /* scroll if content is too long */
+  border-left: 2px solid #ccc;
+}
+
+/* Sidebar list items */
+aside ul {
+  list-style: none;
+}
+aside ul li {
+  margin: 8px 0;
+  padding: 5px;
+  background: #ddd;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+aside ul li:hover {
+  background: #ccc;
+}
+
+/* Tweet-specific styling */
+.tweet {
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.tweet p {
+  margin: 0;
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column; /* stack article and aside vertically */
+  }
+  aside {
+    border-left: none;
+    border-top: 2px solid #ccc;
+    max-height: none;       /* allow full expansion */
+  }
+}

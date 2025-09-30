@@ -7,3 +7,42 @@ body {
 h1 {
     color: darkblue;
 }
+/* Make the page full-height and a vertical flex container */
+body {
+  display: flex;           /* 1) body becomes a flex container */
+  flex-direction: column;  /* 2) stack children vertically: header, main, footer */
+  min-height: 100vh;       /* take full viewport height */
+  margin: 0;
+}
+
+/* main is a horizontal flex container holding article + aside */
+main {
+  display: flex;    /* 3) main becomes a horizontal flex container */
+  flex-direction: row;
+  flex: auto;       /* 4) allow main to grow and fill available space */
+  gap: 16px;        /* optional spacing between article and aside */
+  padding: 12px;
+}
+
+/* article takes 2 "shares" of the available width */
+article {
+  flex: 2;          /* 5) article takes 2 parts of the total flex share */
+  overflow-y: auto; /* scroll vertically if content is taller than area */
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.04) inset;
+}
+
+/* aside takes 1 "share" of the available width */
+aside {
+  flex: 1;          /* 6) aside takes 1 part of the total flex share */
+  overflow-y: auto; /* scroll vertically if content is taller than area */
+  padding: 10px;
+  background: #fafafa;
+}
+
+/* Simple header/footer styling */
+header, footer {
+  padding: 16px;
+  background: #f0f0f0;
+}
