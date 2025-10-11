@@ -1,0 +1,96 @@
+/* ======================
+   Custom Fonts
+====================== */
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('../assets/fonts/SourceSansPro-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Spin Cycle OT';
+    src: url('../assets/fonts/SpinCycleOT.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ======================
+   Base Styles
+====================== */
+body {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+}
+
+header {
+    text-align: center;
+    padding: 100px 20px;
+    background: #111;
+    color: white;
+}
+
+h1 {
+    font-family: 'Spin Cycle OT', cursive;
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff6565;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover,
+.btn:active {
+    opacity: 0.9;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+
+/* ======================
+   Responsive Design
+====================== */
+@media (max-width: 480px) {
+    header {
+        padding: 60px 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Max content width */
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+}
